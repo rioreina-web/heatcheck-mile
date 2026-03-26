@@ -1465,6 +1465,11 @@
 
     <script src="https://strava-embeds.com/embed.js"></script>
     <script>
+        // Always start at top
+        window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
+        if (history.scrollRestoration) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+
         // Nav scroll effect
         window.addEventListener('scroll', () => {
             document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
