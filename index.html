@@ -74,6 +74,11 @@
     <meta name="theme-color" content="#FF00FF">
     <meta name="apple-mobile-web-app-title" content="Heatcheck Mile">
 
+    <script>
+        if (history.scrollRestoration) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
@@ -1465,11 +1470,6 @@
 
     <script src="https://strava-embeds.com/embed.js"></script>
     <script>
-        // Always start at top
-        window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
-        if (history.scrollRestoration) history.scrollRestoration = 'manual';
-        window.scrollTo(0, 0);
-
         // Nav scroll effect
         window.addEventListener('scroll', () => {
             document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
