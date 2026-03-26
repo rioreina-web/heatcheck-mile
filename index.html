@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heatcheck Mile | Austin's Hottest Road Mile</title>
+    <meta name="description" content="The Heatcheck Mile — Austin's grassroots road mile. May 2, 2026 at Onion Creek, South Austin. Heat-based racing for all levels. $25 registration. Chip timed.">
+    <meta name="keywords" content="Heatcheck Mile, Austin mile race, road mile, Austin running, Onion Creek race, mile race Texas, grassroots running, Post Run Drip">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Heatcheck Mile | May 2, 2026 | Austin, TX">
+    <meta property="og:description" content="Austin's grassroots road mile. Heat-based racing from community to elite. Onion Creek, South Austin. $25 registration.">
+    <meta property="og:image" content="rioHC.JPG">
+    <meta property="og:url" content="https://heatcheckmile.com">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Heatcheck Mile | Austin's Hottest Road Mile">
+    <meta name="twitter:description" content="May 2, 2026. Onion Creek, South Austin. Heat-based racing for all levels.">
+    <meta name="twitter:image" content="rioHC.JPG">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://heatcheckmile.com">
+
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsEvent",
+        "name": "The Heatcheck Mile",
+        "description": "Austin's grassroots road mile. Heat-based racing for all levels at Onion Creek, South Austin.",
+        "startDate": "2026-05-02T07:30:00-05:00",
+        "endDate": "2026-05-02T10:00:00-05:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": "Onion Creek",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "6804 Onion Creek Dr",
+                "addressLocality": "Austin",
+                "addressRegion": "TX",
+                "postalCode": "78744",
+                "addressCountry": "US"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Post Run Drip",
+            "email": "rioreina@gmail.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "25",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-03-01"
+        },
+        "sport": "Running",
+        "maximumAttendeeCapacity": 200
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hot-pink: #FF00FF;
+            --hot-pink-dim: #cc00cc;
+            --hot-pink-glow: rgba(255, 0, 255, 0.15);
+            --black: #ffffff;
+            --off-black: #f7f7f7;
+            --dark-gray: #e5e5e5;
+            --mid-gray: #d0d0d0;
+            --light-gray: #666;
+            --white: #111111;
+            --cream: #333333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============ GRAIN OVERLAY ============ */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ============ NAV ============ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.05em;
+            color: var(--hot-pink);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--hot-pink); }
+
+        .nav-cta {
+            background: var(--hot-pink) !important;
+            color: var(--black) !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 2px;
+            font-weight: 700 !important;
+            transition: all 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--white) !important;
+            transform: translateY(-1px);
+        }
+
+        /* ============ MOBILE NAV ============ */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--hot-pink);
+            transition: all 0.3s;
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(255, 0, 255, 0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(255, 0, 255, 0.04) 0%, transparent 60%),
+                var(--black);
+        }
+
+        .hero-lines {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            opacity: 0.04;
+        }
+
+        .hero-lines::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 120px,
+                var(--hot-pink) 120px,
+                var(--hot-pink) 121px
+            );
+            transform: rotate(-15deg);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero-year {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--hot-pink);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.2s;
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 14vw, 11rem);
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            color: var(--white);
+            margin-bottom: 0.3em;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.4s;
+        }
+
+        .hero-title span {
+            display: block;
+            color: var(--hot-pink);
+            text-shadow: 0 0 80px var(--hot-pink-glow);
+        }
+
+        .hero-details {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.6s;
+        }
+
+        .hero-details .divider {
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            background: var(--hot-pink);
+            border-radius: 50%;
+            margin: 0 1rem;
+            vertical-align: middle;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .countdown-unit {
+            text-align: center;
+        }
+
+        .countdown-unit span {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--hot-pink);
+            display: block;
+            line-height: 1;
+        }
+
+        .countdown-unit small {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.8s;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--black);
+            background: var(--hot-pink);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--hot-pink);
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--white);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary span { position: relative; z-index: 1; }
+
+        .btn-primary:hover::before { transform: translateY(0); }
+
+        .btn-secondary {
+            display: inline-block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--mid-gray);
+            transition: all 0.25s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--hot-pink);
+            color: var(--hot-pink);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--light-gray);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 1.2s;
+        }
+
+        .hero-scroll .arrow {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--hot-pink), transparent);
+            animation: pulse-down 2s ease infinite;
+        }
+
+        /* ============ SECTIONS ============ */
+        section { padding: 6rem 2rem; }
+
+        .section-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--hot-pink);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ============ ABOUT ============ */
+        .about {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-images {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-images > .about-image { aspect-ratio: 16/10; }
+
+        .about-image-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .about-image-row .about-image { aspect-ratio: 3/4; }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: filter 0.4s;
+        }
+
+        .about-image:hover img { filter: grayscale(0%); }
+
+        /* ============ PHOTO BREAKS ============ */
+        .photo-break {
+            width: 60%;
+            max-height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo-break img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: filter 0.5s;
+        }
+
+        .photo-break:hover img { filter: grayscale(0%); }
+
+        .photo-break::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--hot-pink);
+        }
+
+        .photo-break-right {
+            margin-left: auto;
+        }
+
+        @media (max-width: 768px) {
+            .photo-break { width: 85%; }
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--hot-pink);
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text .highlight {
+            color: var(--hot-pink);
+            font-weight: 600;
+        }
+
+        .stat-row {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--mid-gray);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--hot-pink);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+            margin-top: 0.3rem;
+        }
+
+        /* ============ SCHEDULE ============ */
+        .schedule-section {
+            background: var(--off-black);
+            border-top: 1px solid var(--dark-gray);
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .schedule-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .schedule-grid {
+            display: grid;
+            gap: 0;
+            margin-top: 2rem;
+        }
+
+        .schedule-item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 2rem;
+            padding: 1.8rem 0;
+            border-bottom: 1px solid var(--dark-gray);
+            align-items: baseline;
+            transition: all 0.2s;
+        }
+
+        .schedule-item:hover {
+            padding-left: 1rem;
+            border-bottom-color: var(--hot-pink);
+        }
+
+        .schedule-time {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--hot-pink);
+            white-space: nowrap;
+        }
+
+        .schedule-event h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .schedule-event p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            line-height: 1.5;
+        }
+
+        /* ============ HEATS ============ */
+        .heats-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .heats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .heat-card {
+            background: var(--off-black);
+            border: 1px solid var(--dark-gray);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .heat-card:hover {
+            border-color: var(--hot-pink);
+            transform: translateY(-4px);
+        }
+
+        .heat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--hot-pink);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .heat-card:hover::before { transform: scaleX(1); }
+
+        .heat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--hot-pink);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .heat-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .heat-desc {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        .heat-pace {
+            display: inline-block;
+            margin-top: 1rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--hot-pink);
+            padding: 0.3rem 0.8rem;
+            border: 1px solid var(--hot-pink);
+        }
+
+        /* ============ HEATS LAYOUT ============ */
+        .heats-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .heats-side-photo {
+            position: sticky;
+            top: 100px;
+            overflow: hidden;
+        }
+
+        .heats-side-photo img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            object-position: center 15%;
+            filter: grayscale(20%);
+            transition: filter 0.4s;
+        }
+
+        .heats-side-photo:hover img { filter: grayscale(0%); }
+
+        .heats-side-photo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--hot-pink);
+        }
+
+        @media (max-width: 768px) {
+            .heats-layout {
+                grid-template-columns: 1fr;
+            }
+            .heats-side-photo { display: none; }
+        }
+
+        /* ============ HEAT PROGRESSION ============ */
+        .heat-progression {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .heat-bar {
+            display: flex;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 80px;
+        }
+
+        .heat-segment {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .heat-segment:hover { filter: brightness(1.15); }
+
+        .seg-1 { background: rgba(255, 0, 255, 0.10); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-2 { background: rgba(255, 0, 255, 0.20); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-3 { background: rgba(255, 0, 255, 0.35); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-4 { background: rgba(255, 0, 255, 0.50); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-5 { background: rgba(255, 0, 255, 0.70); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-6 { background: var(--hot-pink); }
+
+        .seg-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        .seg-5 .seg-label, .seg-6 .seg-label { color: var(--black); }
+
+        .seg-pace {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-top: 0.2rem;
+        }
+
+        .seg-5 .seg-pace, .seg-6 .seg-pace { color: var(--black); }
+
+        .heat-bar-labels {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.8rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+        }
+
+        .heat-arrow {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--mid-gray), var(--hot-pink));
+            margin: 0 1rem;
+            position: relative;
+        }
+
+        .heat-arrow::after {
+            content: '';
+            position: absolute;
+            right: -1px;
+            top: -4px;
+            border: 4px solid transparent;
+            border-left: 6px solid var(--hot-pink);
+        }
+
+        .heat-details {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .heat-detail-item {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+        }
+
+        .heat-detail-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--hot-pink);
+            line-height: 1;
+            min-width: 2rem;
+        }
+
+        .heat-detail-item strong {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .heat-detail-item p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .heat-bar { height: 70px; }
+            .seg-pace { font-size: 0.9rem; }
+            .seg-label { font-size: 0.65rem; }
+        }
+
+        /* ============ COURSE ============ */
+        .course-section {
+            background: var(--off-black);
+            border-top: 1px solid var(--dark-gray);
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .course-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .course-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .course-feature {
+            text-align: center;
+            padding: 2rem 1rem;
+            border: 1px solid var(--dark-gray);
+            transition: border-color 0.3s;
+        }
+
+        .course-feature:hover { border-color: var(--hot-pink); }
+
+        .course-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-feature h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-feature p {
+            font-size: 0.85rem;
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        .course-note {
+            margin-top: 2.5rem;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 0, 255, 0.05);
+            border-left: 3px solid var(--hot-pink);
+            font-size: 0.95rem;
+            color: var(--cream);
+            line-height: 1.7;
+        }
+
+        /* ============ REGISTER CTA ============ */
+        .register-section {
+            text-align: center;
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .register-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(255, 0, 255, 0.06) 0%, transparent 70%);
+        }
+
+        .register-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .register-price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--hot-pink);
+            margin: 1rem 0;
+        }
+
+        .register-price .currency {
+            font-size: 1.5rem;
+            vertical-align: top;
+            line-height: 2;
+        }
+
+        .register-note {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            margin-bottom: 2.5rem;
+        }
+
+        /* ============ RACE COVER ============ */
+        .race-cover {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+            overflow: hidden;
+        }
+
+        .race-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        .race-cover-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, var(--black) 0%, transparent 20%, transparent 80%, var(--black) 100%);
+        }
+
+        /* ============ SHARE ============ */
+        .share-btn {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--mid-gray);
+            transition: all 0.2s;
+        }
+
+        .share-btn:hover {
+            border-color: var(--hot-pink);
+            color: var(--hot-pink);
+        }
+
+        /* ============ CONTACT / FOOTER ============ */
+        footer {
+            background: var(--off-black);
+            border-top: 1px solid var(--dark-gray);
+            padding: 4rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--hot-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        .footer-heading {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--hot-pink);
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a:hover { color: var(--hot-pink); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid var(--dark-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--light-gray);
+            letter-spacing: 0.1em;
+        }
+
+        /* ============ ANIMATIONS ============ */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse-down {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--dark-gray);
+            }
+            .hamburger { display: flex; }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image { max-height: 400px; }
+
+            .schedule-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .course-features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .stat-row {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="#" class="nav-logo"><img src="Artboard1.svg" alt="Heatcheck Mile" style="height: 52px; vertical-align: middle;"></a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#heats">Heats</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" target="_blank" rel="noopener" class="nav-cta">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-lines"></div>
+        <div class="hero-content">
+            <p class="hero-year">Year 2 &mdash; Austin, Texas</p>
+            <h1 class="hero-title">
+                HEATCHECK
+                <span>MILE</span>
+            </h1>
+            <p class="hero-details">
+                May 2, 2026
+                <span class="divider"></span>
+                Onion Creek, South Austin
+                <span class="divider"></span>
+                Heats start 7:30 AM
+            </p>
+            <!-- Countdown -->
+            <div class="countdown" id="countdown" style="opacity:0; animation: fadeUp 0.8s ease forwards 0.7s;">
+                <div class="countdown-unit"><span id="cd-days">--</span><small>Days</small></div>
+                <div class="countdown-unit"><span id="cd-hours">--</span><small>Hours</small></div>
+                <div class="countdown-unit"><span id="cd-mins">--</span><small>Min</small></div>
+                <div class="countdown-unit"><span id="cd-secs">--</span><small>Sec</small></div>
+            </div>
+            <div class="hero-cta-group">
+                <a href="#register" class="btn-primary"><span>Register Now</span></a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="padding: 6rem 2rem;">
+        <div class="about">
+            <div class="about-image reveal">
+                <img src="DSC08975.JPG" alt="Heatcheck Mile racer" loading="lazy">
+            </div>
+            <div class="about-text reveal">
+                <p class="section-label">The Race</p>
+                <h2 class="section-title">The Fastest<br>Morning in Austin.</h2>
+                <p>
+                    The Heatcheck Mile is Austin's grassroots road mile &mdash;
+                    a <span class="highlight">heat-based, all-levels race</span> built
+                    for anyone who wants to test themselves over the purest distance in running.
+                </p>
+                <p>
+                    Year 1 brought out everyone from sub-5 racers to first-timers.
+                    The energy was electric. The competition was real. Year 2 is going to be bigger.
+                </p>
+                <p>
+                    Whether you're chasing a PR, racing your friends, or just want to see
+                    what you've got &mdash; <span class="highlight">this is your race.</span>
+                </p>
+                <div class="stat-row">
+                    <div class="stat">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Mile</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Heats</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Runners</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="schedule-section">
+        <div class="schedule-inner">
+            <p class="section-label reveal">Race Day</p>
+            <h2 class="section-title reveal">Schedule</h2>
+            <div class="schedule-grid">
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">6:30 AM</div>
+                    <div class="schedule-event">
+                        <h3>Check-In &amp; Bib Pickup</h3>
+                        <p>Arrive early. Grab your bib, get your heat assignment, warm up.</p>
+                    </div>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">7:15 AM</div>
+                    <div class="schedule-event">
+                        <h3>Course Briefing</h3>
+                        <p>Quick rundown of the course, rules, and heat assignments.</p>
+                    </div>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">7:30 AM</div>
+                    <div class="schedule-event">
+                        <h3>Heat 1</h3>
+                        <p>Every heat turns up the temps from here.</p>
+                    </div>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">7:30&ndash;9:30</div>
+                    <div class="schedule-event">
+                        <h3>All Heats</h3>
+                        <p>Heats roll every 10&ndash;15 minutes. Every wave gets the same race-day energy.</p>
+                    </div>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">9:30 AM</div>
+                    <div class="schedule-event">
+                        <h3>Elite Heat</h3>
+                        <p>The final heat. Fastest seed times. The crowd's been building all morning for this one.</p>
+                    </div>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">10:00 AM</div>
+                    <div class="schedule-event">
+                        <h3>Awards Ceremony</h3>
+                        <p>Overall winners, age group awards, and the best stories of the morning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEATS -->
+    <section id="heats" style="padding: 6rem 2rem;">
+        <div class="heats-section heats-layout">
+            <div class="heats-content">
+            <p class="section-label reveal">Race Format</p>
+            <h2 class="section-title reveal">How Heats Work</h2>
+            <p class="reveal" style="color: var(--light-gray); max-width: 640px; line-height: 1.7; margin-bottom: 2.5rem;">
+                Submit your seed time when you register. At bib pickup, you'll be assigned to a heat
+                based on your seed so you're racing people your speed. Heats build from slowest to fastest &mdash;
+                the energy gets bigger with every wave.
+            </p>
+
+            <!-- Heat progression graphic -->
+            <div class="heat-progression reveal">
+                <div class="heat-bar-container">
+                    <div class="heat-bar">
+                        <div class="heat-segment seg-1" style="flex: 1;">
+                            <div class="seg-label">H1</div>
+                            <div class="seg-pace">7:30+</div>
+                        </div>
+                        <div class="heat-segment seg-2" style="flex: 1;">
+                            <div class="seg-label">H2</div>
+                            <div class="seg-pace">6:30–7:30</div>
+                        </div>
+                        <div class="heat-segment seg-3" style="flex: 1;">
+                            <div class="seg-label">H3</div>
+                            <div class="seg-pace">5:45–6:30</div>
+                        </div>
+                        <div class="heat-segment seg-4" style="flex: 1;">
+                            <div class="seg-label">H4</div>
+                            <div class="seg-pace">5:20–5:45</div>
+                        </div>
+                        <div class="heat-segment seg-5" style="flex: 1;">
+                            <div class="seg-label">H5</div>
+                            <div class="seg-pace">5:00–5:20</div>
+                        </div>
+                        <div class="heat-segment seg-6" style="flex: 1;">
+                            <div class="seg-label">H6</div>
+                            <div class="seg-pace">Sub 5</div>
+                        </div>
+                    </div>
+                    <div class="heat-bar-labels">
+                        <span>Hot</span>
+                        <div class="heat-arrow"></div>
+                        <span>On Fire</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heat-details reveal">
+                <div class="heat-detail-item">
+                    <div class="heat-detail-num">01</div>
+                    <div>
+                        <strong>Register with your seed time</strong>
+                        <p>Your best recent mile or your honest estimate.</p>
+                    </div>
+                </div>
+                <div class="heat-detail-item">
+                    <div class="heat-detail-num">02</div>
+                    <div>
+                        <strong>Get your heat at bib pickup</strong>
+                        <p>Arrive at 6 AM. We'll assign your heat and bib based on your seed.</p>
+                    </div>
+                </div>
+                <div class="heat-detail-item">
+                    <div class="heat-detail-num">03</div>
+                    <div>
+                        <strong>Race your wave</strong>
+                        <p>Every heat is competitive. Every heat gets the full race-day experience.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="heats-side-photo reveal">
+                <img src="ShannonHC.JPG" alt="Heatcheck Mile racer">
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSE -->
+    <section id="course" class="course-section">
+        <div class="course-inner">
+            <p class="section-label reveal">The Course</p>
+            <h2 class="section-title reveal">Onion Creek, South Austin</h2>
+            <p class="reveal" style="color: var(--cream); line-height: 1.8; max-width: 700px;">
+                A fast, flat 3-turn loop through one of South Austin's best neighborhoods.
+                Shaded stretches, smooth roads, and a finish line you can hear from 400 meters out.
+            </p>
+            <div class="course-features reveal">
+                <div class="course-feature">
+                    <div class="course-feature-icon">&#9652;</div>
+                    <h3>Flat &amp; Fast</h3>
+                    <p>Minimal elevation change. This course is built for speed.</p>
+                </div>
+                <div class="course-feature">
+                    <div class="course-feature-icon">&#9201;</div>
+                    <h3>Chip Timed</h3>
+                    <p>Accurate chip timing for every runner in every heat.</p>
+                </div>
+                <div class="course-feature">
+                    <div class="course-feature-icon">&#9733;</div>
+                    <h3>Crowd Support</h3>
+                    <p>Spectators line the finish. You'll hear them coming in.</p>
+                </div>
+            </div>
+            <div class="reveal" style="margin-top: 2.5rem;">
+                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3344807416657361548" data-style="standard" data-map-hash="15.03/30.17428/-97.74589" data-from-embed="true"></div>
+            </div>
+            <div class="course-note reveal">
+                <strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=6804+Onion+Creek+Dr+Austin+TX+78744" target="_blank" rel="noopener" style="color: var(--hot-pink);">6804 Onion Creek Dr, Austin, TX 78744</a>
+                <br><br>
+                <strong>Parking:</strong> <a href="https://www.google.com/maps/d/viewer?mid=1qcGgvnmn4iXYujgaCt3_OtUHaMvQsDM&femb=1&ll=30.176738200000006%2C-97.7476805&z=13" target="_blank" rel="noopener" style="color: var(--hot-pink);">View parking map &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section id="register" class="register-section">
+        <div class="register-inner">
+            <p class="section-label reveal">Lock In Your Spot</p>
+            <h2 class="section-title reveal">Registration Open</h2>
+            <div class="register-price reveal">
+                <span class="currency">$</span>25
+            </div>
+            <p class="register-note reveal">
+                Includes bib, chip timing, finisher merch, and post-race refreshments.
+                <br>+ processing fee
+                <br>Spots are limited &mdash; once heats fill up, they're gone.
+            </p>
+            <div class="reveal">
+                <a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" class="btn-primary" style="font-size: 1.1rem; padding: 1.2rem 3rem;">
+                    <span>Register Now</span>
+                </a>
+            </div>
+            <p class="reveal" style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--light-gray);">
+                Questions? Email <a href="mailto:rioreina@gmail.com" style="color: var(--hot-pink); display: inline;">rioreina@gmail.com</a>
+            </p>
+
+            <!-- Share -->
+            <div class="share-row reveal" style="margin-top: 2.5rem;">
+                <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light-gray); margin-bottom: 0.8rem;">Tell your running crew</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="https://twitter.com/intent/tweet?text=The%20Heatcheck%20Mile%20is%20back.%20May%202%2C%202026.%20Austin%2C%20TX.%20Heat-based%20road%20mile%20for%20all%20levels.&url=https://heatcheckmile.com" target="_blank" rel="noopener" class="share-btn">Twitter / X</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://heatcheckmile.com" target="_blank" rel="noopener" class="share-btn">Facebook</a>
+                    <a href="sms:?body=The%20Heatcheck%20Mile%20-%20May%202%2C%202026%20in%20Austin.%20Heat-based%20road%20mile.%20https://heatcheckmile.com" class="share-btn">Text a Friend</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL-WIDTH RACE PHOTO -->
+    <div class="race-cover">
+        <img src="rioHC.JPG" alt="Heatcheck Mile start line" loading="lazy">
+        <div class="race-cover-overlay"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">HEATCHECK MILE</div>
+                <p class="footer-tagline">
+                    Austin's grassroots road mile.
+                </p>
+            </div>
+            <div>
+                <p class="footer-heading">Quick Links</p>
+                <a href="#about">About</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#heats">Heats</a>
+                <a href="#course">Course</a>
+                <a href="#register">Register</a>
+            </div>
+            <div>
+                <p class="footer-heading">Contact</p>
+                <a href="mailto:rioreina@gmail.com">rioreina@gmail.com</a>
+                <a href="https://postrundripcom.wordpress.com" target="_blank" rel="noopener">Post Run Drip Blog</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=6804+Onion+Creek+Dr+Austin+TX+78744" target="_blank" rel="noopener" style="margin-top: 0.5rem; font-size: 0.8rem;">
+                    6804 Onion Creek Dr<br>Austin, TX 78744
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Heatcheck Mile. All rights reserved.</p>
+            <p>A Post Run Drip Event</p>
+        </div>
+    </footer>
+
+    <script src="https://strava-embeds.com/embed.js"></script>
+    <script>
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Countdown to May 2, 2026 7:30 AM CDT
+        function updateCountdown() {
+            const race = new Date('2026-05-02T07:30:00-05:00').getTime();
+            const now = Date.now();
+            const diff = race - now;
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML = '<span style="font-family:Bebas Neue;font-size:2rem;color:var(--hot-pink);">RACE DAY</span>';
+                return;
+            }
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+            document.getElementById('cd-days').textContent = d;
+            document.getElementById('cd-hours').textContent = h;
+            document.getElementById('cd-mins').textContent = m;
+            document.getElementById('cd-secs').textContent = s;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
