@@ -1145,6 +1145,45 @@
             }
         }
 
+        /* ============ RESULTS ============ */
+        .results-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: var(--off-black);
+        }
+        .results-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .results-year {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1.5rem 2.5rem;
+            border: 1px solid var(--dark-gray);
+            border-radius: 4px;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .results-year:hover {
+            border-color: var(--hot-pink);
+            background: var(--hot-pink-glow);
+        }
+        .results-year-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--white);
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+        .results-year-sub {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--hot-pink);
+            margin-top: 0.4rem;
+        }
+
         /* ============ SOCIAL ============ */
         .social-section {
             padding: 6rem 2rem;
@@ -1179,6 +1218,7 @@
             <li><a href="#schedule">Schedule</a></li>
             <li><a href="#heats">Heats</a></li>
             <li><a href="#course">Course</a></li>
+            <li><a href="#results">Results</a></li>
             <li><a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" target="_blank" rel="noopener" class="nav-cta">Register</a></li>
         </ul>
     </nav>
@@ -1459,6 +1499,18 @@
                     <a href="sms:?body=The%20Heatcheck%20Mile%20is%20back!%20May%202nd%20in%20South%20Austin!%20Info%20here%20-%20https://www.heatcheckmile.com" class="share-btn">Text a Friend</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="results-section">
+        <div class="results-inner">
+            <p class="section-label reveal">Race History</p>
+            <h2 class="section-title reveal">Results</h2>
+            <a href="https://my.raceresult.com/341262/" target="_blank" rel="noopener" class="results-year reveal">
+                <div class="results-year-label">2025</div>
+                <div class="results-year-sub">View Official Results &rarr;</div>
+            </a>
         </div>
     </section>
 
