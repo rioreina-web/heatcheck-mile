@@ -24,7 +24,11 @@
     <link rel="canonical" href="https://www.heatcheckmile.com">
 
     <!-- Favicon -->
-    <link rel="icon" href="LogoNew.svg" type="image/svg+xml">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGK8ZYSKWJ"></script>
@@ -773,12 +777,10 @@
 
         .heat-segment:hover { filter: brightness(1.15); }
 
-        .seg-1 { background: rgba(255, 0, 255, 0.10); border-right: 1px solid rgba(255, 0, 255, 0.15); }
-        .seg-2 { background: rgba(255, 0, 255, 0.20); border-right: 1px solid rgba(255, 0, 255, 0.15); }
-        .seg-3 { background: rgba(255, 0, 255, 0.35); border-right: 1px solid rgba(255, 0, 255, 0.15); }
-        .seg-4 { background: rgba(255, 0, 255, 0.50); border-right: 1px solid rgba(255, 0, 255, 0.15); }
-        .seg-5 { background: rgba(255, 0, 255, 0.70); border-right: 1px solid rgba(255, 0, 255, 0.15); }
-        .seg-6 { background: var(--hot-pink); }
+        .seg-1 { background: rgba(255, 0, 255, 0.15); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-2 { background: rgba(255, 0, 255, 0.35); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-3 { background: rgba(255, 0, 255, 0.60); border-right: 1px solid rgba(255, 0, 255, 0.15); }
+        .seg-4 { background: var(--hot-pink); }
 
         .seg-label {
             font-family: 'Barlow Condensed', sans-serif;
@@ -789,7 +791,7 @@
             color: var(--white);
         }
 
-        .seg-5 .seg-label, .seg-6 .seg-label { color: var(--black); }
+        .seg-4 .seg-label { color: var(--black); }
 
         .seg-pace {
             font-family: 'Bebas Neue', sans-serif;
@@ -798,7 +800,7 @@
             margin-top: 0.2rem;
         }
 
-        .seg-5 .seg-pace, .seg-6 .seg-pace { color: var(--black); }
+        .seg-4 .seg-pace { color: var(--black); }
 
         .heat-bar-labels {
             display: flex;
@@ -1152,37 +1154,197 @@
             background: var(--off-black);
         }
         .results-inner {
-            max-width: 700px;
+            max-width: 1000px;
             margin: 0 auto;
         }
-        .results-year {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1.5rem 2.5rem;
+        .winners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            text-align: left;
+        }
+        .winners-year {
+            background: var(--black);
             border: 1px solid var(--dark-gray);
-            border-radius: 4px;
-            text-decoration: none;
-            transition: border-color 0.2s, background 0.2s;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
-        .results-year:hover {
+        .winners-year:hover {
             border-color: var(--hot-pink);
-            background: var(--hot-pink-glow);
+            transform: translateY(-4px);
         }
-        .results-year-label {
+        .winners-year::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--hot-pink);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .winners-year:hover::before { transform: scaleX(1); }
+        .winners-year-label {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.5rem;
-            color: var(--white);
-            letter-spacing: 0.05em;
+            font-size: 3rem;
+            color: var(--hot-pink);
             line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.02em;
         }
-        .results-year-sub {
+        .winners-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--dark-gray);
+            margin-bottom: 1.2rem;
+        }
+        .winner {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: baseline;
+        }
+        .winner-division {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 0.75rem;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+            margin-bottom: 0.2rem;
+        }
+        .winner-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--white);
+            line-height: 1.2;
+        }
+        .winner-time {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--hot-pink);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        .winners-results-link {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--hot-pink);
-            margin-top: 0.4rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.2s;
         }
+        .winners-results-link:hover { gap: 0.7rem; }
+
+        /* ============ PHOTOS ============ */
+        .photos-section {
+            padding: 6rem 2rem;
+        }
+        .photos-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .photos-intro {
+            color: var(--cream);
+            line-height: 1.8;
+            max-width: 640px;
+            margin: 0 auto 3rem;
+        }
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .photo-card {
+            background: var(--off-black);
+            border: 1px solid var(--dark-gray);
+            padding: 2.5rem 2rem;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        .photo-card:hover {
+            border-color: var(--hot-pink);
+            transform: translateY(-4px);
+        }
+        .photo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--hot-pink);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .photo-card:hover::before { transform: scaleX(1); }
+        .photo-card-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--hot-pink);
+            margin-bottom: 0.75rem;
+        }
+        .photo-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: var(--white);
+            margin-bottom: 0.6rem;
+        }
+        .photo-card-handle {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+        }
+        .photo-card-cta {
+            margin-top: auto;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--hot-pink);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .photo-card-cta::after {
+            content: '\2192';
+            transition: transform 0.2s;
+        }
+        .photo-card:hover .photo-card-cta::after { transform: translateX(4px); }
 
         /* ============ SOCIAL ============ */
         .social-section {
@@ -1219,7 +1381,8 @@
             <li><a href="#heats">Heats</a></li>
             <li><a href="#course">Course</a></li>
             <li><a href="#results">Results</a></li>
-            <li><a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" target="_blank" rel="noopener" class="nav-cta">Register</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" target="_blank" rel="noopener" class="nav-cta" onclick="gtag('event', 'click_register', {event_category: 'registration', event_label: 'nav_cta'});">Register</a></li>
         </ul>
     </nav>
 
@@ -1248,7 +1411,7 @@
                 <div class="countdown-unit"><span id="cd-secs">--</span><small>Sec</small></div>
             </div>
             <div class="hero-cta-group">
-                <a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" target="_blank" rel="noopener" class="btn-primary"><span>Register Now</span></a>
+                <a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event', 'click_register', {event_category: 'registration', event_label: 'hero_button'});"><span>Register Now</span></a>
                 <a href="#about" class="btn-secondary">Learn More</a>
             </div>
         </div>
@@ -1329,21 +1492,28 @@
                     </div>
                 </div>
                 <div class="schedule-item reveal">
-                    <div class="schedule-time">7:30&ndash;9:00</div>
+                    <div class="schedule-time">8:00 AM</div>
                     <div class="schedule-event">
-                        <h3>All Heats</h3>
-                        <p>Heats roll every 10&ndash;15 minutes. Every wave gets the same race-day energy.</p>
+                        <h3>Heat 2</h3>
+                        <p>Energy climbs. The crowd's warming up.</p>
                     </div>
                 </div>
                 <div class="schedule-item reveal">
-                    <div class="schedule-time">9:15 AM</div>
+                    <div class="schedule-time">8:20 AM</div>
                     <div class="schedule-event">
-                        <h3>Elite Heat</h3>
+                        <h3>Heat 3</h3>
+                        <p>Pace ticks up. The build to the front of the field.</p>
+                    </div>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-time">8:45 AM</div>
+                    <div class="schedule-event">
+                        <h3>Heat 4</h3>
                         <p>The final heat. Fastest seed times. The crowd's been building all morning for this one.</p>
                     </div>
                 </div>
                 <div class="schedule-item reveal">
-                    <div class="schedule-time">10:00 AM</div>
+                    <div class="schedule-time">9:00 AM</div>
                     <div class="schedule-event">
                         <h3>Awards Ceremony</h3>
                         <p>Overall winners and the best stories of the morning.</p>
@@ -1371,27 +1541,19 @@
                     <div class="heat-bar">
                         <div class="heat-segment seg-1" style="flex: 1;">
                             <div class="seg-label">H1</div>
-                            <div class="seg-pace">7:30+</div>
+                            <div class="seg-pace">5:50+</div>
                         </div>
                         <div class="heat-segment seg-2" style="flex: 1;">
                             <div class="seg-label">H2</div>
-                            <div class="seg-pace">6:30–7:30</div>
+                            <div class="seg-pace">5:15&ndash;5:50</div>
                         </div>
                         <div class="heat-segment seg-3" style="flex: 1;">
                             <div class="seg-label">H3</div>
-                            <div class="seg-pace">5:45–6:30</div>
+                            <div class="seg-pace">4:50&ndash;5:15</div>
                         </div>
                         <div class="heat-segment seg-4" style="flex: 1;">
                             <div class="seg-label">H4</div>
-                            <div class="seg-pace">5:20–5:45</div>
-                        </div>
-                        <div class="heat-segment seg-5" style="flex: 1;">
-                            <div class="seg-label">H5</div>
-                            <div class="seg-pace">5:00–5:20</div>
-                        </div>
-                        <div class="heat-segment seg-6" style="flex: 1;">
-                            <div class="seg-label">H6</div>
-                            <div class="seg-pace">Sub 5</div>
+                            <div class="seg-pace">Sub 4:50</div>
                         </div>
                     </div>
                     <div class="heat-bar-labels">
@@ -1424,6 +1586,10 @@
                         <p>Every heat is competitive. Every heat gets the full race-day experience.</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="reveal" style="margin-top: 2.5rem;">
+                <a href="https://my.raceresult.com/395924/participants#0_7A0282" target="_blank" rel="noopener" class="btn-secondary" onclick="gtag('event', 'click_participants', {event_category: 'engagement', event_label: 'heats_section'});">View Heats &amp; Participants</a>
             </div>
             </div>
             <div class="heats-side-photo reveal">
@@ -1482,7 +1648,7 @@
                 Includes bib, chip timing, and post-race refreshments.
             </p>
             <div class="reveal">
-                <a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" class="btn-primary" style="font-size: 1.1rem; padding: 1.2rem 3rem;">
+                <a href="https://raceroster.com/events/2026/118435/the-heatcheck-mile" class="btn-primary" style="font-size: 1.1rem; padding: 1.2rem 3rem;" onclick="gtag('event', 'click_register', {event_category: 'registration', event_label: 'register_section'});">
                     <span>Register Now</span>
                 </a>
             </div>
@@ -1506,11 +1672,75 @@
     <section id="results" class="results-section">
         <div class="results-inner">
             <p class="section-label reveal">Race History</p>
-            <h2 class="section-title reveal">Results</h2>
-            <a href="https://my.raceresult.com/341262/" target="_blank" rel="noopener" class="results-year reveal">
-                <div class="results-year-label">2025</div>
-                <div class="results-year-sub">View Official Results &rarr;</div>
-            </a>
+            <h2 class="section-title reveal">Past Winners</h2>
+            <div class="winners-grid">
+                <div class="winners-year reveal">
+                    <div class="winners-year-label">2026</div>
+                    <div class="winners-list">
+                        <div class="winner">
+                            <div>
+                                <div class="winner-division">Men's Champion</div>
+                                <div class="winner-name">Keegan Calmes</div>
+                            </div>
+                            <div class="winner-time">4:11.42</div>
+                        </div>
+                        <div class="winner">
+                            <div>
+                                <div class="winner-division">Women's Champion</div>
+                                <div class="winner-name">Shannon Gaden</div>
+                            </div>
+                            <div class="winner-time">4:34.25</div>
+                        </div>
+                    </div>
+                    <a href="https://my.raceresult.com/395924/#4_4DA38D" target="_blank" rel="noopener" class="winners-results-link" onclick="gtag('event', 'click_results', {event_category: 'engagement', event_label: 'results_2026'});">Full 2026 Results &rarr;</a>
+                </div>
+                <div class="winners-year reveal">
+                    <div class="winners-year-label">2025</div>
+                    <div class="winners-list">
+                        <div class="winner">
+                            <div>
+                                <div class="winner-division">Men's Champion</div>
+                                <div class="winner-name">Jared Gilley</div>
+                            </div>
+                            <div class="winner-time">4:14.71</div>
+                        </div>
+                        <div class="winner">
+                            <div>
+                                <div class="winner-division">Women's Champion</div>
+                                <div class="winner-name">Shannon Gaden</div>
+                            </div>
+                            <div class="winner-time">4:39.00</div>
+                        </div>
+                    </div>
+                    <a href="https://my.raceresult.com/341262/" target="_blank" rel="noopener" class="winners-results-link" onclick="gtag('event', 'click_results', {event_category: 'engagement', event_label: 'results_2025'});">Full 2025 Results &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section id="photos" class="photos-section">
+        <div class="photos-inner">
+            <p class="section-label reveal">Race Day, Captured</p>
+            <h2 class="section-title reveal">Photos</h2>
+            <p class="photos-intro reveal">
+                Massive shoutout to the photographers who showed up for Year 1.
+                Browse the full albums and tag them when you share.
+            </p>
+            <div class="photos-grid">
+                <a href="https://jasoncasadyphotography.pixieset.com/theheatcheckmile/" target="_blank" rel="noopener" class="photo-card reveal" onclick="gtag('event', 'click_photo_album', {event_category: 'engagement', event_label: 'jason_casady'});">
+                    <p class="photo-card-label">Photographer</p>
+                    <h3>Jason Casady</h3>
+                    <p class="photo-card-handle">@jason_casady</p>
+                    <span class="photo-card-cta">View Album on Pixieset</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1mFDD7tp68i9uLBuUbwdpkS2bbMtJZafJ" target="_blank" rel="noopener" class="photo-card reveal" onclick="gtag('event', 'click_photo_album', {event_category: 'engagement', event_label: 'adrian_lewis'});">
+                    <p class="photo-card-label">Photographer</p>
+                    <h3>Adrian Lewis</h3>
+                    <p class="photo-card-handle">@adrian.lewis___</p>
+                    <span class="photo-card-cta">View Album on Google Drive</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1567,6 +1797,7 @@
                 <a href="#schedule">Schedule</a>
                 <a href="#heats">Heats</a>
                 <a href="#course">Course</a>
+                <a href="#photos">Photos</a>
                 <a href="#register">Register</a>
             </div>
             <div>
